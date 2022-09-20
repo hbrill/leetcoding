@@ -10,7 +10,7 @@ class Solution {
                 result += records.get(top);
             }else if(operations[i].equals("C")){
                 result -= records.get(top);
-                records.remove(records.get(top));
+                records.remove(top);
                 top--;
             }else if(operations[i].equals("D")){
                 int newEntry = 2 * records.get(top);
