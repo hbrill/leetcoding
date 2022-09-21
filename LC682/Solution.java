@@ -1,3 +1,5 @@
+import java.util.ArrayList;
+
 class Solution {
     public int calPoints(String[] operations) {
         ArrayList<Integer> records = new ArrayList<Integer>(3);
