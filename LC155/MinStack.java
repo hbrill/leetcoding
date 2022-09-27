@@ -18,19 +18,11 @@ class MinStack {
         stack.add(val);
         top++;
         
-        // This seems redundant but avoids checking on an empty stack and
-        // generating a stack overflow exception
-        if(minStack.size() < 1){
-            minStack.add(val);
-            minIndex++;
-        }else if(val < minStack.get(minIndex) || val == minStack.get(minIndex)){
-            // this condition checks and adds a value to minStack even if an
-            // element of the same value is on the list. In this case, we set
-            // the minimum to be the most recently added of the twi
+        // if element added is smaller than or equal to current smallest, add to minStacl
+        if(minStack.size() < 1 || val < minStack.get(minIndex) || val == minStack.get(minIndex)){
             minStack.add(val);
             minIndex++;
         }
-        
     }
     
     public void pop() {
