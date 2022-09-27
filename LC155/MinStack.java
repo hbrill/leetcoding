@@ -18,7 +18,7 @@ class MinStack {
         stack.add(val);
         top++;
         
-        // if element added is smaller than or equal to current smallest, add to minStacl
+        // if element added is smaller than or equal to current smallest, add to minStack
         if(minStack.size() < 1 || val < minStack.get(minIndex) || val == minStack.get(minIndex)){
             minStack.add(val);
             minIndex++;
