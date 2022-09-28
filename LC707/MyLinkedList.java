@@ -57,15 +57,13 @@ class MyLinkedList {
         newNode.val = val;
         if (tail == null) { 
             // if tail is null, we're empty. The first element to be on the list will always be the head and tail until another one is added
-            head = newNode;
-            tail = head;
+            addAtHead(val);
         } else {
             tail.next = newNode;
             newNode.prev = tail;
             tail = newNode;
+            nodeIndex++;
         }
-        
-        nodeIndex++;
     }
     
     public void addAtIndex (int index, int val) {
@@ -109,6 +107,10 @@ class MyLinkedList {
         if(index == 0){
             head = head.next;
             nodeIndex--;
+            if(nodeIndex == -1){
+                head = null;
+                tail = null;
+            }
         }else if(index == nodeIndex){
             tail = tail.prev;
             nodeIndex--;
