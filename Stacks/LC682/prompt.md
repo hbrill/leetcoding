@@ -49,7 +49,7 @@ Explanation:
 Since the record is empty, the total sum is 0.
  
 ## Constraints
-1 <= operations.length <= 1000
-operations[i] is "C", "D", "+", or a string representing an integer in the range [-3 * 104, 3 * 104].
-For operation "+", there will always be at least two previous scores on the record.
-For operations "C" and "D", there will always be at least one previous score on the record.
+* 1 <= operations.length <= 1000
+* operations[i] is "C", "D", "+", or a string representing an integer in the range [-3 * 104, 3 * 104].
+* For operation "+", there will always be at least two previous scores on the record.
+* For operations "C" and "D", there will always be at least one previous score on the record.

@@ -30,6 +30,6 @@ minStack.top();    // return 0
 minStack.getMin(); // return -2
 
 ## Constraints
--231 <= val <= 231 - 1
-Methods pop, top and getMin operations will always be called on non-empty stacks.
-At most 3 * 104 calls will be made to push, pop, top, and getMin.
+* -231 <= val <= 231 - 1
+* Methods pop, top and getMin operations will always be called on non-empty stacks.
+* At most 3 * 104 calls will be made to push, pop, top, and getMin.

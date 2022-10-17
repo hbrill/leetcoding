@@ -9,10 +9,10 @@ Output: [5,4,3,2,1]
 Input: head = [1,2]
 Output: [2,1]
 
-## Example 3:
+## Example 3
 Input: head = []
 Output: []
 
 ## Constraints:
-The number of nodes in the list is the range [0, 5000].
--5000 <= Node.val <= 5000
+* The number of nodes in the list is the range [0, 5000].
+* -5000 <= Node.val <= 5000
