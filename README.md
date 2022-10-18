@@ -19,3 +19,7 @@ my goal was to implement them according to the Data Structure they were linked t
 2. https://leetcode.com/problems/merge-two-sorted-lists/
 3. https://leetcode.com/problems/design-linked-list/
 4. https://leetcode.com/problems/design-browser-history/
+
+## Queues
+1. https://leetcode.com/problems/number-of-students-unable-to-eat-lunch/
+2. https://leetcode.com/problems/implement-stack-using-queues/
