@@ -23,3 +23,6 @@ my goal was to implement them according to the Data Structure they were linked t
 ## Queues
 1. https://leetcode.com/problems/number-of-students-unable-to-eat-lunch/
 2. https://leetcode.com/problems/implement-stack-using-queues/
+
+## Recursion
+1. https://leetcode.com/problems/reverse-linked-list/
