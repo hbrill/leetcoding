@@ -31,13 +31,10 @@ class BrowserHistory {
     }
     
     public String back(int steps) {
-        if(backSteps == 0)
-            return first.url;
-        else if(backSteps <=  steps){
+        if(backSteps <=  steps){
             forwardSteps += backSteps;
             backSteps -= backSteps;
             current = first;
-            return first.url;
         }else{
             Page ptr = current;
             int i = 0;
@@ -48,18 +45,15 @@ class BrowserHistory {
                 i++;
             }
             current = ptr;
-            return current.url;
         }
+         return current.url;
     }
     
     public String forward(int steps) {
-        if(forwardSteps == 0)
-            return current.url;
-        else if(forwardSteps <= steps){
+        if(forwardSteps <= steps){
             backSteps += forwardSteps;
             forwardSteps -= forwardSteps;
             current = last;
-            return last.url;
         }else{
             Page ptr = current;
             int i = 0;
@@ -70,8 +64,8 @@ class BrowserHistory {
                 i++;
             }
             current = ptr;
-            return current.url;
         }
+        return current.url;
     }
 }
 
