@@ -1,20 +1,22 @@
+/*
+ * Keep in mind this works because we have input in the format [0,0,1,2,2,3,4,4,5], and since repeated elements
+are consequents, we can just move the pointer up and replace any instance of the element after the first one
+with the non-repeated elements.
+ */
 class Solution {
-    // The goal is to replace all duplicate elements in the array with an invalid value. See constraints.
-    // Assumming that elements are SORTED this will work
     public int removeDuplicates(int[] nums) {
-        int non_dup = 0;
+        int non_dups = 0; // Tracks last non duplicate index
+        // We start at index 1 since the first element at index 0 cannot be a duplicate
         for(int i = 1; i < nums.length; i++){
-            /* We start looping at second index. If element at index is not equals to the element at the non_dup index,
-            we move this pointer one up and replace the value at this index with this value. 
-            Keep in mind this works because we have input in the format [0,0,1,2,2,3,4,4,5], and since repeated elements
-            are consequents, we can just move the pointer up and replace any instance of the element after the first one
-            with the non-repeated elements. */
-            
-            if(nums[i] != nums[non_dup]){
-                non_dup++;
-                nums[non_dup] = nums[i];
+            if(nums[i] != nums[non_dups]){
+                // If the element at the current index is not equals to the element at the last non duplicate index, we move the non duplicate index to point to the next index
+                non_dups++;
+                // We can assume that the index following the previous non duplicate index is either a) a duplicate element or b) the current element; in either case we reassign it with the current element 
+                nums[non_dups] = nums[i];
             }
         }
-        return non_dup+1;
+
+        // Return only the first k elements which should consist of only the unique elements. Since the variable non_dups is "indexed", add one to represent the actual number of elements
+        return non_dups+1; 
     }
 }
