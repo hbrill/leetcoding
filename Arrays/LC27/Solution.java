@@ -23,9 +23,8 @@ class Solution {
             }else if(nums[ptr] == 102){
                 // Now, if our pointer is pointing at an index where an bad value previously was, and we still have good
                 // elements left in the array, we exchange the position of the good element and the bad element
-                int hold = nums[ptr];
                 nums[ptr] = nums[i];
-                nums[i] = hold;
+                nums[i] = 102;
                 ptr++;    
             }
         }
