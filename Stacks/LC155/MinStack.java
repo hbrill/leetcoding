@@ -3,22 +3,26 @@ package LC155;
 import java.util.ArrayList;
 
 class MinStack {
+    // I used to stacks: one for all elements, one to store minimum elements as they get added.
+    // The challenge is that when an element gets removed, if it was considered to be the current minimum, how do we get
+    // back to what was the previous minimum before the most recent one? Having two stacks solves that
     ArrayList<Integer> stack; 
     ArrayList<Integer> minStack; // to keep track of all smaller elements
     int top;
-    int minIndex = -1; // index of current smallest element
+    int minIndex; // index of current smallest element
     
     public MinStack() {
         stack = new ArrayList<Integer>();
         minStack = new ArrayList<Integer>();
         top = -1;
+        minIndex = -1;
     }
     
     public void push(int val) {
         stack.add(val);
         top++;
         
-        // if element added is smaller than or equal to current smallest, add to minStack
+        // if this is the first element in the stack, or if element added is smaller than or equal to current smallest, add to minStack
         if(minStack.size() < 1 || val < minStack.get(minIndex) || val == minStack.get(minIndex)){
             minStack.add(val);
             minIndex++;

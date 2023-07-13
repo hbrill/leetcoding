@@ -4,13 +4,14 @@ class Solution {
     Stack<Character> stk = new Stack<Character>(); 
     boolean isValid = false;
     int matches = 0;
+
+    // This validation will not work if the opening brackets come after the closing ones.
+    // For ex: If input is ")(" this will return false, even though we do have a corresponding set of brackets.
     public boolean isValid(String s) {
         if(s.length() == 1) // if only one bracket, we know it doesn't have a closing correspondent bracket, so return false
             return false;
         
-        
         for(int i = 0; i < s.length(); i++){
-            
             // Loop over string and if current character is an OPENING bracket, push it to stack 
             if(s.charAt(i) == '(' || s.charAt(i) == '{' || s.charAt(i) == '['){
                 stk.push(s.charAt(i));
